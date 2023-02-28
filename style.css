@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-body: "Big Shoulders Display", sans-serif;
+  --ff-p: "Lexend Deca", sans-serif;
+
+  --fc-p: hsla(0, 0%, 100%, 0.75);
+  --fc-h: hsl(0, 0%, 95%);
+
+  --bg-orange: hsl(31, 77%, 52%);
+  --bg-cyan: hsl(184, 100%, 22%);
+  --bg-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cards p {
+  font-family: var(--ff-p);
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: var(--fc-p);
+
+  text-align: left;
+  max-width: 18rem;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+.cards h1 {
+  font-family: var(--ff-body);
+  font-size: 3rem;
+  font-weight: 700;
+
+  color: var(--fc-h);
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: flex;
+  margin: auto;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  width: 30rem;
+  height: 47rem;
+
+  padding: 3rem;
+}
+
+.cards .orange {
+  background: var(--bg-orange);
+
+  border-radius: 1rem 0 0 1rem;
+}
+
+.cards .ciano {
+  background: var(--bg-cyan);
+}
+
+.cards .green {
+  background: var(--bg-dark-cyan);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.cards .card .icon {
+  width: 6rem;
+  height: 5rem;
+}
+.cards .card .icon img {
+  width: 100%;
+}
+
+.cards button {
+  background: var(--fc-h);
+  border-radius: 3rem;
+  border: none;
+
+  width: 14.7rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--ff-p);
+  line-height: 2rem;
+}
+
+.cards .orange button {
+  color: var(--bg-orange);
+}
+.cards .ciano button {
+  color: var(--bg-cyan);
+}
+.cards .green button {
+  color: var(--bg-dark-cyan);
+}
+
+.cards button:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+  }
+  .cards .orange {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .cards .green{
+    border-radius: 0 0 1rem 1rem;
+  }
+}
